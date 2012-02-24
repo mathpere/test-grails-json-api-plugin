@@ -7,10 +7,10 @@ class BootStrap {
     def init = { servletContext ->
 
 
-        def book1 = new Book(text: "the text 1", title: "the title 1", releaseDate: new Date(), isbn: "isbn 1")
-        def book2 = new Book(text: "the text 2", title: "the title 2", releaseDate: new Date(), isbn: "isbn 2")
-        def book3 = new Book(text: "the text 3", title: "the title 3", releaseDate: new Date(), isbn: "isbn 3")
-        def book4 = new Book(text: "the text 4", title: "the title 4", releaseDate: new Date(), isbn: "isbn 4")
+        def book1 = new Book(text: "the text 1", title: "the title 1", releaseDate: new Date(), isbn: "isbn 1", type: Book.Type.EDUCATION)
+        def book2 = new Book(text: "the text 2", title: "the title 2", releaseDate: new Date(), isbn: "isbn 2", type: Book.Type.FICTION)
+        def book3 = new Book(text: "the text 3", title: "the title 3", releaseDate: new Date(), isbn: "isbn 3", type: Book.Type.EDUCATION)
+        def book4 = new Book(text: "the text 4", title: "the title 4", releaseDate: new Date(), isbn: "isbn 4", type: Book.Type.FICTION)
 
 
         [new Comment(name: "name", text: "text").save(),

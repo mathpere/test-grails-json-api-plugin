@@ -6,6 +6,11 @@ class Book {
     Date releaseDate
     String isbn
     String text
+    Type type
+
+    static enum Type {
+        EDUCATION, FICTION
+    }
 
     static hasMany = [comments: Comment]
 
