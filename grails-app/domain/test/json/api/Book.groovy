@@ -11,7 +11,7 @@ class Book {
 
     // essai
     static apiConfig = [
-            excludedFields: ["text"],
+            excludes: ["text"],
             config1: ["comments"]
     ]
 

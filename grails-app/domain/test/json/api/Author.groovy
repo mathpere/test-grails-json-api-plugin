@@ -7,12 +7,23 @@ class Author {
 
     static hasMany = [books: Book]
 
+    def getSearchBarToken1() {
+        "${firstName} ${lastName}"
+    }
+
+
+    def getSearchBarToken2() {
+        "${firstName} ${lastName}"
+    }
+
+
+    def getSearchBarToken3() {
+        "${firstName} ${lastName}"
+    }
+
+
     static apiConfig = [
-            nestedFields: ["books"],
-            customFields: [
-                    searchBarToken: { "${it.firstName} ${it.lastName}"},
-                    searchBarToken2: { "${it.firstName} ${it.lastName} (2)"}
-            ]
+            includes: ["books", "searchBarToken2"]
     ]
 
 }
