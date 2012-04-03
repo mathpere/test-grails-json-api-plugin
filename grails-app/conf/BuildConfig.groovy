@@ -12,7 +12,7 @@ grails.project.dependency.resolution = {
         // uncomment to disable ehcache
         // excludes 'ehcache'
     }
-    log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+    log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
 
     repositories {
@@ -21,6 +21,7 @@ grails.project.dependency.resolution = {
         grailsHome()
         grailsCentral()
         mavenCentral()
+        mavenRepo "https://github.com/mathpere/mvn-repo/raw/master/releases"
 
         // uncomment these to enable remote dependency resolution from public Maven repositories
         //mavenCentral()
@@ -41,8 +42,11 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.7.1"
         runtime ":resources:1.1.5"
 
+        compile ":json-api:0.1"
+
         build ":tomcat:$grailsVersion"
     }
 }
 
-grails.plugin.location.'grails-json-api' = "/Users/mathieuperez/Sources/grails-json-api-plugin"
+// for development
+// grails.plugin.location.'grails-json-api' = "/Users/mathieuperez/Sources/grails-json-api-plugin"
